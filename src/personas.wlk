@@ -22,7 +22,11 @@ class Persona {
 		return self.quiereEntrar(unaCarpa) and unaCarpa.dejaIngresar(self)
 	}
 	method entrarALaCarpa(unaCarpa){
-		unaCarpa.cantidadDePersonas(1)
+		if (self.puedeEntrar(unaCarpa)){
+			unaCarpa.cantidadDePersonas(1)
+		}else{
+		self.error("no se puede entrar")
+		}
 	}
 }
 
