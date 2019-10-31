@@ -21,6 +21,9 @@ class Persona {
 	method puedeEntrar(unaCarpa){
 		return self.quiereEntrar(unaCarpa) and unaCarpa.dejaIngresar(self)
 	}
+	method entrarALaCarpa(unaCarpa){
+		unaCarpa.cantidadDePersonas(1)
+	}
 }
 
 class Belgas inherits Persona{
@@ -41,7 +44,7 @@ class Aleman inherits Persona{
 	}
 	override method quiereEntrar(unaCarpa)
 	{
-		return super(unaCarpa) and (unaCarpa.cantidadDePersonas() % 2 == 0)
+		return super(unaCarpa) and (unaCarpa.cantidadDePersonas().even())
 	}
 }
 
