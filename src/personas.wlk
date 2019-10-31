@@ -25,7 +25,7 @@ class Persona {
 		if (self.puedeEntrar(unaCarpa)){
 			unaCarpa.cantidadDePersonas(1)
 		}else{
-		self.error("no se puede entrar")
+			self.error("no se puede entrar")
 		}
 	}
 }
