@@ -1,0 +1,17 @@
+//Saber el contenido de alcohol de una jarra de cerveza.
+import marcas.*
+import personas.* 
+
+
+describe "primera parte"{
+	var corona = new Rubia()
+	var guines = new Negra()
+	var Hofbrau = new Roja()
+	
+	fixture{
+		guines.cantidadDeLupulos(2) 
+	}
+	test "pruebas sobre objeto guines"{
+		assert.equals(,guines.graduaciones())
+	}
+}
